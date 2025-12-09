@@ -2,35 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Lantern | CO₂ & PM Capture for Buildings</title>
+  <title>LumaAir | CO₂ & PM Capture for Buildings</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Lantern builds plug-and-play HVAC exhaust nodes that capture CO₂ and PM, with AI monitoring and compliance-ready reporting for LL97/BERDO/BPS." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 24 24'%3E%3Cpath fill='%230ea5e9' d='M12 2a7 7 0 0 0-7 7c0 4.418 7 13 7 13s7-8.582 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5a2.5 2.5 0 0 1 0 5Z'/%3E%3C/svg%3E" />
-  <!-- Tailwind via CDN (fine for mock; swap to build pipeline later) -->
+  <meta name="description" content="LumaAir builds plug-and-play HVAC exhaust nodes that reduce CO₂ and PM, with AI monitoring and compliance-ready reporting for LL97/BERDO/BPS." />
+  <meta property="og:title" content="LumaAir — CO₂ & PM Capture for Buildings">
+  <meta property="og:description" content="Plug-and-play exhaust node. Compliance-ready. Retrofit-fast.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://dummyimage.com/1200x630/0ea5e9/ffffff&text=LumaAir">
+  <meta name="theme-color" content="#0ea5e9"/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 24 24'%3E%3Crect rx='6' width='24' height='24' fill='%230ea5e9'/%3E%3Ctext x='12' y='16' font-size='10' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'%3ELA%3C/text%3E%3C/svg%3E" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#ecfeff', 100:'#cffafe', 200:'#a5f3fc', 300:'#67e8f9', 400:'#22d3ee',
-              500:'#06b6d4', 600:'#0891b2', 700:'#0e7490', 800:'#155e75', 900:'#164e63'
-            }
-          }
-        }
-      }
-    }
+    tailwind.config = { theme: { extend: {
+      colors: { brand: { 50:'#ecfeff',100:'#cffafe',200:'#a5f3fc',300:'#67e8f9',400:'#22d3ee',500:'#06b6d4',600:'#0ea5e9',700:'#0e7490',800:'#155e75',900:'#164e63' } }
+    } } }
   </script>
   <style>
-    /* Subtle gradient background */
-    .bg-grid {
-      background-image:
-        radial-gradient(circle at 1px 1px, rgba(14,165,233,.12) 1px, transparent 0);
-      background-size: 18px 18px;
-    }
-    .shadow-soft { box-shadow: 0 10px 30px rgba(2, 6, 23, .08); }
-    .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,.75); }
+    .bg-grid{background-image:radial-gradient(circle at 1px 1px, rgba(14,165,233,.12) 1px, transparent 0);background-size:18px 18px}
+    .shadow-soft{box-shadow:0 10px 30px rgba(2,6,23,.08)}
+    .glass{backdrop-filter:blur(8px);background:rgba(255,255,255,.75)}
   </style>
 </head>
 <body class="text-slate-800 antialiased">
@@ -38,8 +28,8 @@
   <header class="sticky top-0 z-50 bg-white/80 glass border-b border-slate-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <a href="#" class="flex items-center gap-2">
-        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-500 text-white font-bold">L</span>
-        <span class="font-semibold tracking-tight">Lantern</span>
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-white font-bold">LA</span>
+        <span class="font-semibold tracking-tight">LumaAir</span>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="#solution" class="hover:text-brand-600">Solution</a>
@@ -49,9 +39,7 @@
         <a href="#faq" class="hover:text-brand-600">FAQ</a>
         <a href="#contact" class="inline-flex items-center px-3 py-1.5 rounded-lg bg-brand-600 text-white hover:bg-brand-700">Get in touch</a>
       </nav>
-      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-md border border-slate-300 text-slate-700">
-        <span class="sr-only">Open menu</span>☰
-      </button>
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-md border border-slate-300 text-slate-700">☰</button>
     </div>
     <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200">
       <nav class="px-4 py-3 flex flex-col gap-3 text-sm">
@@ -76,7 +64,7 @@
             <span class="text-brand-600">Compliance-ready. Retrofit-fast.</span>
           </h1>
           <p class="mt-5 text-lg text-slate-600 max-w-2xl">
-            Lantern builds plug-and-play HVAC exhaust nodes that reduce CO₂ and particulate emissions while monitoring air quality and automating reporting for LL97/BERDO/BPS. No major HVAC overhaul. Minimal downtime.
+            LumaAir builds plug-and-play HVAC exhaust nodes that reduce CO₂ and particulate emissions while monitoring air quality and automating reporting for LL97/BERDO/BPS. No major HVAC overhaul. Minimal downtime.
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
             <a href="#contact" class="inline-flex items-center px-5 py-3 rounded-xl bg-brand-600 text-white hover:bg-brand-700 shadow-soft">Talk to us</a>
@@ -91,7 +79,7 @@
         <div class="lg:col-span-5">
           <div class="relative bg-white border border-slate-200 rounded-2xl p-6 shadow-soft">
             <div class="absolute -top-3 -right-3 bg-brand-600 text-white text-xs px-3 py-1 rounded-full">New</div>
-            <h3 class="text-lg font-semibold mb-2">Why Lantern</h3>
+            <h3 class="text-lg font-semibold mb-2">Why LumaAir</h3>
             <ul class="text-slate-600 space-y-2 text-sm">
               <li>• Rapid retrofit exhaust node (bypass, low ΔP)</li>
               <li>• Dual-action: CO₂ capture + PM filtration</li>
@@ -170,10 +158,10 @@
     </div>
   </section>
 
-  <!-- VALUE PROPS -->
+  <!-- VALUE -->
   <section id="value" class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold tracking-tight">Why buildings choose Lantern</h2>
+      <h2 class="text-3xl font-bold tracking-tight">Why buildings choose LumaAir</h2>
       <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="p-6 border rounded-2xl border-slate-200">
           <h3 class="font-semibold">Compliance-ready</h3>
@@ -203,7 +191,7 @@
     </div>
   </section>
 
-  <!-- VALIDATION (LINKS YOU CAN EDIT) -->
+  <!-- VALIDATION -->
   <section id="validation" class="py-20 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold tracking-tight">Validation & sources</h2>
@@ -228,27 +216,6 @@
             <li>Amine-functionalized CNF (paper): <a class="text-brand-700 hover:underline" href="https://pubs.acs.org/doi/10.1021/am501666e" target="_blank" rel="noopener">ACS Appl. Mater. Interfaces</a></li>
             <li>CNF adsorbent patent (WO2017009241): <a class="text-brand-700 hover:underline" href="https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2017009241" target="_blank" rel="noopener">WIPO</a></li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- USE CASES -->
-  <section class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold tracking-tight">Where Lantern fits</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="p-6 border border-slate-200 rounded-2xl">
-          <h3 class="font-semibold">Large commercial</h3>
-          <p class="mt-2 text-sm text-slate-600">Office towers & mixed-use properties seeking LL97/BERDO compliance with minimal disruption.</p>
-        </div>
-        <div class="p-6 border border-slate-200 rounded-2xl">
-          <h3 class="font-semibold">Campuses & healthcare</h3>
-          <p class="mt-2 text-sm text-slate-600">Universities, hospitals, and labs with strong ESG mandates.</p>
-        </div>
-        <div class="p-6 border border-slate-200 rounded-2xl">
-          <h3 class="font-semibold">Multifamily portfolios</h3>
-          <p class="mt-2 text-sm text-slate-600">Portfolio-wide retrofits with centralized monitoring & service.</p>
         </div>
       </div>
     </div>
@@ -285,7 +252,7 @@
       <div class="p-8 border border-slate-200 rounded-2xl shadow-soft">
         <h2 class="text-3xl font-bold tracking-tight">Let’s talk</h2>
         <p class="mt-3 text-slate-600 text-sm">Tell us about your building portfolio and compliance timeline. We’ll reply within 48 hours.</p>
-        <!-- Netlify-compatible form; swap action to your backend later -->
+        <!-- Netlify-compatible form; replace action or use Formspree -->
         <form name="contact" method="POST" data-netlify="true" class="mt-6 grid sm:grid-cols-2 gap-4">
           <input type="hidden" name="form-name" value="contact" />
           <input required name="name" placeholder="Your name" class="w-full rounded-lg border border-slate-300 px-3 py-2" />
@@ -302,7 +269,7 @@
   <!-- FOOTER -->
   <footer class="py-10 border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-slate-500 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
-      <div>© <span id="y"></span> Lantern. All rights reserved.</div>
+      <div>© <span id="y"></span> LumaAir. All rights reserved.</div>
       <div class="flex gap-4">
         <a href="#validation" class="hover:text-slate-700">Sources</a>
         <a href="#" class="hover:text-slate-700">Privacy</a>
@@ -312,18 +279,13 @@
   </footer>
 
   <script>
-    // mobile menu
-    const btn = document.getElementById('menuBtn');
-    const menu = document.getElementById('mobileMenu');
-    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
-    // year
-    document.getElementById('y').textContent = new Date().getFullYear();
-    // smooth scroll (basic)
+    const btn=document.getElementById('menuBtn'); const menu=document.getElementById('mobileMenu');
+    btn?.addEventListener('click',()=>menu.classList.toggle('hidden'));
+    document.getElementById('y').textContent=new Date().getFullYear();
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id = a.getAttribute('href');
-        if(id.length > 1){ e.preventDefault(); document.querySelector(id)?.scrollIntoView({behavior:'smooth'}); if(!menu.classList.contains('hidden')) menu.classList.add('hidden'); }
-      })
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href'); if(id.length>1){e.preventDefault(); document.querySelector(id)?.scrollIntoView({behavior:'smooth'}); if(!menu.classList.contains('hidden')) menu.classList.add('hidden');}
+      });
     });
   </script>
 </body>
